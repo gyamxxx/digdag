@@ -17,6 +17,7 @@ import io.digdag.standards.operator.LoopOperatorFactory;
 import io.digdag.standards.operator.ForEachOperatorFactory;
 import io.digdag.standards.operator.EmbulkOperatorFactory;
 import io.digdag.standards.operator.pg.PgOperatorFactory;
+import io.digdag.standards.operator.redshift.RedshiftOperatorFactory;
 import io.digdag.standards.operator.td.TdForEachOperatorFactory;
 import io.digdag.standards.operator.td.TdOperatorFactory;
 import io.digdag.standards.operator.td.TdPartialDeleteOperatorFactory;
@@ -54,6 +55,7 @@ public class OperatorModule
         addStandardOperatorFactory(binder, FailOperatorFactory.class);
         addStandardOperatorFactory(binder, NotifyOperatorFactory.class);
         addStandardOperatorFactory(binder, PgOperatorFactory.class);
+        addStandardOperatorFactory(binder, RedshiftOperatorFactory.class);
     }
 
     protected void addStandardOperatorFactory(Binder binder, Class<? extends OperatorFactory> factory)
